@@ -53,11 +53,12 @@ a.controller('b', function($scope){
             }
 
      
-      $scope.detail = function(){
+      $scope.detail = function(index){
          $scope.c = {"display":"block"}
          $scope.d = {"display":"none"}
          $scope.e = {"display":"none"}
          $scope.f = {"display":"none"}
+          $scope.jobs.get(index,1)
      }
     $scope.remove = function(index){
          $scope.jobs.splice(index,1)

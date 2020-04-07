@@ -157,10 +157,13 @@ footer{
 #des-panel{
   display: none;
   background-color:#00aeef;
-  width: 70%;
+  width: 80%;
   margin:auto; 
 }
 
+#job-search:hover{
+  box-shadow: inset 1px 1px 2px 2px #eee;
+}
 
 #about h4,#about h6,#wrapper h4,#contact-page h6,#work-page h4{
   color:#00aeef;
