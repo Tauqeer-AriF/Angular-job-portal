@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WORK</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="bootstrap js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+	<div class="container my-5" ng-show="f">
+          <img src="images/16.png" class="img-fluid mx-auto d-block big-img">
+      </div>
+    <div class="container px-5 pt-3" id="work-page" ng-show="f">
+        <p class="prev" ng-click="homework()">home  -->  <span class="link">Work</span></p>
+
+        <div class="btn-group d-flex justify-content-center mb-4" role="group" aria-label="Basic example">
+            <button type="button" class="btn  border-0 px-4">Print</button>
+            <button type="button" class="btn border-0 px-4">Interactive</button>
+            <button type="button" class="btn border-0 px-4">Video</button>
+        </div>
+
+        <div class="row text-light py-5" >
+            <div class="col-lg-6 mb-5" ng-repeat="x in wcol">
+                <img src="images/18.png" class="img-fluid mb-5">
+                
+                <h4 class=""><i class="fa fa-adn float-left text-light mr-2 mt-1"></i>{{x.head}}</h4>
+                <p class="ml-2 font-weight-light">{{x.head2}}</p>
+                <p class="mt-5">{{x.pargraph}}</p> 
+            </div>
+        </div>
+
+        <ul class="pagination justify-content-center py-5">
+            <li class="page-item mr-5"><a class="page-link rounded-circle border-0" href="javascript:void(0);" id="pagination-btn"><i class="fa fa-angle-left"></i></a></li>
+            <li class="page-item"><a class="page-link bg-transparent border-0" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link bg-transparent border-0" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link bg-transparent border-0" href="javascript:void(0);">3</a></li>
+            <li class="page-item"><a class="page-link bg-transparent border-0" href="javascript:void(0);">4</a></li>
+            <li class="page-item ml-5"><a class="page-link rounded-circle border-0" href="javascript:void(0);" id="pagination-btn"><i class="fa fa-angle-right"></i></a></li>
+        </ul>
+
+    </div>
+
+<script type="text/javascript" src="bootstrap js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html5>
+<html ng-app="1st">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="bootstrap js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script type="text/javascript" src="angular/module.js"></script>
+   
+</head>
+<body ng-controller="b">
+  
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+  <a class="navbar-brand border-right pr-3" href="#"><img ng-src={{logo}} class="img-fluid"></a>
+  <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" ng-click="home()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Work</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-lg mr-2 rounded-0 Sign-in">Sign-in</button>
+      <button class="btn btn-lg my-2 my-sm-0 Sign-Out rounded-0">Sign-Out</button>
+    </form>
+  </div>
+</div>
+</nav>
+
+
+
+<div class="container-fluid py-5" ng-style="e">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+    <h3 class="mb-3 text-center">Job Searching Just Got So Easy</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+
+    <div class="input-group my-5 p-2 bg-dark">
+       <input type="text" class="form-control rounded-0" placeholder="Search job" aria-label="Recipient's username" aria-describedby="basic-addon2" ng-model="l">
+          <div class="input-group-append">
+              <span class="input-group-text rounded-0 ml-3" id="basic-addon2">Search</span>
+          </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid" id="des-panel" ng-style="c">
+    <div class="container " id="jobs">
+  <div class="row py-4 px-2" id="jobs-row" ng-repeat="x in jobs">
+    <div class="col-lg-4">
+      <i class="fa fa-behance float-left mr-2"></i>
+      <h6 class="text-capitalize">{{x.title}}</h6>
+      <p class="ml-5 text-capitalize">{{x.type}}</p>
+    </div>
+    <div class="col-lg-2 pt-4">
+      <p class="text-capitalize">{{x.community}}</p>
+    </div>
+    <div class="col-lg-3 pt-4">
+      <p class="text-capitalize">{{x.location}}</p>
+    </div>
+    <div class="col-lg-3 pt-4">
+      <button class="btn btn-lg mr-2 rounded-0 Apply float-right">Apply</button>
+      <p>{{x.salary | currency}}</p>
+    </div>
+
+    <div class="col-md-12 text-center">
+      <p class="text-capitalize">{{x.description}}</p>
+      <button class="btn btn-lg mr-2 rounded-0 Apply">Apply</button>
+    </div>
+ 
+  </div>
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container " id="jobs" ng-style="d">
+  <div class="row py-4 px-2" id="jobs-row" ng-repeat="x in jobs | filter:l">
+    <div class="col-lg-4">
+      <i class="fa fa-behance float-left mr-2"></i>
+      <h6 class="text-capitalize">{{x.title}}</h6>
+      <p class="ml-5 text-capitalize">{{x.type}}</p>
+    </div>
+    <div class="col-lg-2 pt-4">
+      <p class="text-capitalize">{{x.community}}</p>
+    </div>
+    <div class="col-lg-3 pt-4">
+      <p class="text-capitalize">{{x.location}}</p>
+    </div>
+    <div class="col-lg-3 pt-4">
+      <button class="btn btn-lg mr-2 rounded-0 Apply float-right" ng-click = "detail()">Detail</button>
+      <p>{{x.salary | currency}}</p>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container-fluid my-5" ng-style="f">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+   <h3 class="mb-5 text-center">Add Job Just Go to get Easy</h3>
+   <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="title" ng-model="title">
+    </div>
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="type" ng-model="type">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Address" ng-model="location">
+    </div>
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="salary" ng-model="salary">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Company" ng-model="community">
+    </div>
+  </div>
+
+  <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Description"
+   ng-model="description"></textarea>
+
+  <button type="submit" class="btn btn-outline-primary rounded-0 mt-2 btn-block" ng-click="add()">Add</button>
+</form>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <div class="container p-5">
+  <ul class="nav" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link Seekers" data-toggle="pill" href="#home">Job Seekers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link Employeers" data-toggle="pill" href="#menu1">Employeers</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <p><i class="fa fa-twitter"></i><i class="fa fa-behance"></i><i class="fa fa-linkedin"></i><i class="fa fa-instagram"></i><i class="fa fa-pinterest"></i><i class="fa fa-phone"></i></p>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <p><i class="fa fa-twitter"></i><i class="fa fa-behance"></i><i class="fa fa-linkedin"></i><i class="fa fa-instagram"></i><i class="fa fa-pinterest"></i><i class="fa fa-phone"></i></p>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+ <script type="text/javascript" src="bootstrap js/bootstrap.min.js"></script>
+</body>
+</html>

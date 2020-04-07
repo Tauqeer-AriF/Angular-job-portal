@@ -1,0 +1,163 @@
+body{
+   
+}
+
+
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url('../fonts/Poppins-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+h2,h3,h4,h5,h6{
+    font-family: 'Poppins-Black';
+}
+a,input,textarea{
+    font-family: 'Poppins-Medium';
+    font-size: 13px;
+}
+p,span,.btn{
+    font-family: 'Poppins-Regular';
+    font-size: 12px;
+}
+.navbar {
+  background-color: ;
+}
+.navbar-brand img{transition: 1s}
+.navbar-brand img:hover{transform: scale(-1.1);}
+
+.nav-link:{
+    transition: 1s;  
+}
+.nav-link:focus{
+    border-bottom:1px solid #00aeef;
+    
+}
+.sign-in{
+    color:#00aeef;
+}
+.Sign-in:hover{
+    color: #00aeef;
+    background-color: black;
+    border: 1px solid #00aeef;
+}
+.Sign-out{
+    background-color: #00aeef;
+    color: white;
+}
+.Sign-out:hover{
+    color: #00aeef;
+    background-color: black;
+    border: 1px solid #00aeef;
+}
+
+#basic-addon2{background-color: #00aeef;color: white}
+
+#basic-addon2:hover{
+    color: #00aeef;
+    background-color: white;
+    border: 1px solid #00aeef;
+    cursor: pointer;
+}
+.tab-pane i{
+  padding: 30px;
+  background-color: black;
+  font-size: 20px;
+  color: white;
+  margin-right: 20px;
+  transition: 0.4s;
+  margin-bottom: 10px;
+}
+.tab-pane i:hover{
+  color: #00aeef;
+  border-bottom: 1px solid #00aeef;
+  background-color: white;
+}
+.seekers:focus{
+  color: #00aeef;
+  border-bottom: 1px solid #00aeef;
+  background-color: white;
+}
+.Employeers:focus{
+  color: #00aeef;
+  border-bottom: 1px solid #00aeef;
+  background-color: white;
+}
+
+#jobs{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  transition: 0.4s;
+}
+#jobs-row:hover{
+   color: #00aeef;
+    background-color: white;
+    border-top: 1px solid #00aeef;
+    border-bottom: 1px solid #00aeef;
+}
+
+#jobs i{
+    padding: 30px;
+  background-color: black;
+  font-size: 20px;
+  color: white;
+  margin-left: 20px;
+  transition: 0.4s;
+}
+#jobs i:hover{
+  color: #00aeef;
+  border-bottom: 1px solid #00aeef;
+  background-color: white;
+}
+#jobs-row{
+  margin-top:10px;
+}
+.apply{
+    color:#00aeef;
+    margin-top: -10px;
+    transition: 0.3s;
+}
+.apply:hover{
+    color: #00aeef;
+    background-color: white;
+    border-left: 1px solid #00aeef;
+    border-right: 1px solid #00aeef;
+}
+
+footer{
+  background-color:#ebebeb;
+}
+
+
+
+#des-panel{
+  display: none;
+  background-color:#00aeef;
+  width: 70%;
+  margin:auto; 
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px){
+    
+    .tab-pane i{  margin-right: 2px;}
+  
+}
