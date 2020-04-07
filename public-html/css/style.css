@@ -136,12 +136,23 @@ p,span,.btn{
     border-left: 1px solid #00aeef;
     border-right: 1px solid #00aeef;
 }
+.remove{
+    color:#00aeef;
+    margin-top: -10px;
+    transition: 0.3s;
+}
+.remove:hover{
+    color: red;
+    background-color: white;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+}
 
 footer{
   background-color:#ebebeb;
 }
 
-
+.input-group{background-color:#ebebeb;}
 
 #des-panel{
   display: none;
@@ -151,7 +162,10 @@ footer{
 }
 
 
-
+#about h4,#about h6,#wrapper h4,#contact-page h6,#work-page h4{
+  color:#00aeef;
+  font-size: 15px;
+}
 
 
 

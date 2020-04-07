@@ -27,11 +27,11 @@ a.controller('b', function($scope){
 	$scope.logo = "images/1.png";
 
     $scope.jobs =[
-       {title:"web designer",type:"full-time", community:"dribble community", location:"San Franciso, USA", salary:14000, description:"here goes description"},
-       {title:"Front-end developer",type:"part-time", community:"twitter community", location:"CA Franciso, USA", salary:18000, description:"here goes description"},
-       {title:"backend developer",type:"contract", community:"linkedin community", location:"miami", salary:15000, description:"here goes description"},
-       {title:"fullstack developer",type:"product-base", community:"bionyn community", location:"canada", salary:20000, description:"here goes description"},
-       {title:"python developer",type:"full-time", community:"netsole community", location:"uae", salary:30000, description:"here goes description"}
+       {title:"web designer",type:"full-time", community:"dribble community", location:"San Franciso, USA", salary:14000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {title:"Front-end developer",type:"part-time", community:"twitter community", location:"CA Franciso, USA", salary:18000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {title:"backend developer",type:"contract", community:"linkedin community", location:"miami", salary:15000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {title:"fullstack developer",type:"product-base", community:"bionyn community", location:"canada", salary:20000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {title:"python developer",type:"full-time", community:"netsole community", location:"uae", salary:30000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."}
     ]
 
   $scope.add = function () 
@@ -58,6 +58,9 @@ a.controller('b', function($scope){
          $scope.d = {"display":"none"}
          $scope.e = {"display":"none"}
          $scope.f = {"display":"none"}
+     }
+    $scope.remove = function(index){
+         $scope.jobs.splice(index,1)
       }
 
       $scope.home = function(){
@@ -66,4 +69,64 @@ a.controller('b', function($scope){
          $scope.e = {"display":"block"}
          $scope.f = {"display":"block"}
       }
+
+
+        $scope.c = true;
+         $scope.d = true;
+         $scope.e = true;
+         $scope.f = true;
+         $scope.g = true;
+         $scope.h = true;
+         $scope.i = true;
+         $scope.j = true;
+
+     $scope.about = function(){
+        $scope.g = true;
+        $scope.e = false;
+         $scope.c = false;
+         $scope.d = false;
+         $scope.e = false;
+         $scope.f = false;
+         $scope.h = false;
+         $scope.i = false;
+         $scope.j = false;
+     }
+
+     $scope.work = function(){
+        $scope.g = false;
+        $scope.e = false;
+         $scope.c = false;
+         $scope.d = false;
+         $scope.e = false;
+         $scope.f = false;
+         $scope.h = true;
+         $scope.i = false;
+         $scope.j = false;
+     }
+
+     $scope.blog = function(){
+        $scope.g = false;
+        $scope.e = false;
+         $scope.c = false;
+         $scope.d = false;
+         $scope.e = false;
+         $scope.f = false;
+         $scope.h = false;
+         $scope.i = true;
+         $scope.j = false;
+     }
+
+     $scope.contact = function(){
+        $scope.g = false;
+        $scope.e = false;
+         $scope.c = false;
+         $scope.d = false;
+         $scope.e = false;
+         $scope.f = false;
+         $scope.h = false;
+         $scope.i = false;
+         $scope.j = true;
+     }
+
+
 });
