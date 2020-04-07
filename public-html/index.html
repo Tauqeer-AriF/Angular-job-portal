@@ -58,9 +58,6 @@
 
 
 
-
-
-
 <div class="container-fluid py-5" ng-show="e">
   <div class="row justify-content-center">
     <div class="col-lg-6">
@@ -83,39 +80,46 @@
 
 
 
-<div class="container-fluid" id="des-panel" ng-style="c" ng-show="c">
-    <div class="container" id="jobs">
-  <div class="row py-4 px-2" id="jobs-row" ng-repeat="x in jobs | filter:l">
-    <div class="col-lg-4">
-      <i class="fa fa-behance float-left mr-2"></i>
-      <h6 class="text-capitalize">{{x.title}}</h6>
-      <p class="ml-5 text-capitalize">{{x.type}}</p>
-    </div>
-    <div class="col-lg-2 pt-4">
-      <p class="text-capitalize">{{x.community}}</p>
-    </div>
-    <div class="col-lg-3 pt-4">
-      <p class="text-capitalize">{{x.location}}</p>
-    </div>
-    <div class="col-lg-3 pt-4">
-      <button class="btn btn-lg mr-2 rounded-0 Apply float-right">Apply</button>
-      <p>{{x.salary | currency}}</p>
-    </div>
 
-    <div class="col-md-9 m-auto">
-      <h6 class="mt-5 mb-3">Description:</h6>
-      <p class="text-capitalize">{{x.description}}</p>
-    </div>
- 
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Description</h6>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <div class="modal-body" id="jobs">
+            <div class="row py-3" id="jobs-row" >
+               <div class="col-lg-4">
+                  <i class="fa fa-behance float-left mr-2"></i>
+                  <h6 class="text-capitalize">{{title}}</h6>
+                  <p class="ml-5 text-capitalize">{{type}}</p>
+                </div>
+                <div class="col-lg-2 pt-4">
+                  <p class="text-capitalize">{{community}}</p>
+                </div>
+                <div class="col-lg-3 pt-4">
+                  <p class="text-capitalize">{{location}}</p>
+                </div>
+                <div class="col-lg-3 pt-4">
+                   <button class="btn btn-lg mr-2 rounded-0 Apply float-right">Apply</button>
+                   <p>{{salary | currency}}</p>
+                </div>
+
+                <div class="col-md-9 m-auto">
+                <h6 class="mt-5 mb-3">Description:</h6>
+                <p class="text-capitalize">{{description}}</p>
+            </div>
+          
+        </div>
+      </div>
+    </div>        
   </div>
+</div>
   
-</div>
-</div>
-
-
-
-
-
 
 
 
@@ -123,19 +127,19 @@
   <div class="row py-4 px-2" id="jobs-row" ng-repeat="x in jobs | filter:l">
     <div class="col-lg-4">
       <i class="fa fa-behance float-left mr-2"></i>
-      <h6 class="text-capitalize">{{x.title}}</h6>
-      <p class="ml-5 text-capitalize">{{x.type}}</p>
+      <h6 class="text-capitalize">{{x.Title}}</h6>
+      <p class="ml-5 text-capitalize">{{x.Type}}</p>
     </div>
     <div class="col-lg-2 pt-4">
-      <p class="text-capitalize">{{x.community}}</p>
+      <p class="text-capitalize">{{x.Community}}</p>
     </div>
     <div class="col-lg-3 pt-4">
-      <p class="text-capitalize">{{x.location}}</p>
+      <p class="text-capitalize">{{x.Location}}</p>
     </div>
     <div class="col-lg-3 pt-4">
-      <button class="btn btn-lg mr-2 rounded-0 Apply float-right" ng-click = "detail($index)">Detail</button>
+      <button class="btn btn-lg mr-2 rounded-0 Apply float-right" data-toggle="modal" data-target="#myModal" ng-click = "detail($index)">Detail</button>
       <button class="btn btn-lg mr-2 rounded-0 remove float-right" ng-click = "remove($index)">Remove</button>
-      <p>{{x.salary | currency}}</p>
+      <p>{{x.Salary | currency}}</p>
       
     </div>
   </div>
@@ -153,28 +157,28 @@
    <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="title" ng-model="title">
+      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="title" ng-model="Title">
     </div>
     <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="type" ng-model="type">
+      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="type" ng-model="Type">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Address" ng-model="location">
+      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Address" ng-model="Location">
     </div>
     <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="salary" ng-model="salary">
+      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="salary" ng-model="Salary">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-12">
-      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Company" ng-model="community">
+      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Company" ng-model="Community">
     </div>
   </div>
 
   <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Description"
-   ng-model="description"></textarea>
+   ng-model="Description"></textarea>
 
   <button type="submit" class="btn btn-outline-primary rounded-0 mt-2 btn-block" ng-click="add()">Add</button>
 </form>

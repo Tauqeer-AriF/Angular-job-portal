@@ -154,13 +154,6 @@ footer{
 
 .input-group{background-color:#ebebeb;}
 
-#des-panel{
-  display: none;
-  background-color:#00aeef;
-  width: 80%;
-  margin:auto; 
-}
-
 #job-search:hover{
   box-shadow: inset 1px 1px 2px 2px #eee;
 }

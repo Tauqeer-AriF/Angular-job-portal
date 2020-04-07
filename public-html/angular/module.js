@@ -1,5 +1,5 @@
 
-var a = angular.module('1st',['ngRoute']);
+var a = angular.module('1st',['ngRoute'])
 
 a.config(['$routeProvider', function($routeProvider){
 
@@ -22,44 +22,66 @@ a.config(['$routeProvider', function($routeProvider){
 }]
 );
 
-a.controller('b', function($scope){
+a.controller('b', function($scope,$window){
 
 	$scope.logo = "images/1.png";
 
-    $scope.jobs =[
-       {title:"web designer",type:"full-time", community:"dribble community", location:"San Franciso, USA", salary:14000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
-       {title:"Front-end developer",type:"part-time", community:"twitter community", location:"CA Franciso, USA", salary:18000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
-       {title:"backend developer",type:"contract", community:"linkedin community", location:"miami", salary:15000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
-       {title:"fullstack developer",type:"product-base", community:"bionyn community", location:"canada", salary:20000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
-       {title:"python developer",type:"full-time", community:"netsole community", location:"uae", salary:30000, description:"We are looking for a person with a strong medical background to provide medical advice to patients online."}
-    ]
+    $scope.jobs = [
+       {Title:"web designer", Type:"full-time", Community:"dribble community", Location:"San Franciso, USA", Salary:14000, Description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {Title:"Front-end developer", Type:"part-time", Community:"twitter community", Location:"CA Franciso, USA", Salary:18000, Description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {Title:"backend developer", Type:"contract", Community:"linkedin community", Location:"miami", Salary:15000, Description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {Title:"fullstack developer", Type:"product-base", Community:"bionyn community", Location:"canada", Salary:20000, Description:"We are looking for a person with a strong medical background to provide medical advice to patients online."},
+       {Title:"python developer", Type:"full-time", Community:"netsole community", Location:"uae", Salary:30000, Description:"We are looking for a person with a strong medical background to provide medical advice to patients online."}
+    ];
+
+
+
+
+   $scope.detail = function(index){
+
+                $scope.title = $scope.jobs[index].Title;
+                $scope.type = $scope.jobs[index].Type;
+                $scope.community = $scope.jobs[index].Community;
+                $scope.location = $scope.jobs[index].Location;
+                $scope.salary = $scope.jobs[index].Salary;
+                $scope.description = $scope.jobs[index].Description;
+        };
+
+
+
+
+
+
+
+
+
+
+
 
   $scope.add = function () 
             {
-                if (angular.isDefined($scope.title) && $scope.title != '' && $scope.type != '' && $scope.community != '' && $scope.location != '' && $scope.salary != '' && $scope.description != '') 
+                if (angular.isDefined($scope.Title) && $scope.Title != '' && $scope.Type != '' && $scope.Community != '' && $scope.Location != '' && $scope.Salary != '' && $scope.Description != '') 
                 {
                     // ADD A NEW ELEMENT.
-                    $scope.jobs.push({ title: $scope.title, type: $scope.type, community: $scope.community, location: $scope.location, salary: $scope.salary, description: $scope.description });
+                    $scope.jobs.push({ Title: $scope.Title, Type: $scope.Type, Community: $scope.Community, Location: $scope.Location, Salary: $scope.Salary, Description: $scope.Description });
 
                     // CLEAR THE FIELDS.
-                    $scope.title = '';
-                    $scope.type = '';
-                    $scope.community = '';
-                    $scope.location = '';
-                    $scope.salary = '';
-                    $scope.description = '';
+                    $scope.Title = '';
+                    $scope.Type = '';
+                    $scope.Community = '';
+                    $scope.Location = '';
+                    $scope.Salary = '';
+                    $scope.Description = '';
                     
                 }
             }
 
      
-      $scope.detail = function(index){
-         $scope.c = {"display":"block"}
-         $scope.d = {"display":"none"}
-         $scope.e = {"display":"none"}
-         $scope.f = {"display":"none"}
-          $scope.jobs.get(index,1)
-     }
+      
+
+
+
+
     $scope.remove = function(index){
          $scope.jobs.splice(index,1)
       }
