@@ -1,6 +1,7 @@
 <!DOCTYPE html5>
 <html ng-app="1st">
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap css/bootstrap.min.css">
@@ -10,181 +11,181 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
     <script type="text/javascript" src="angular/module.js"></script>
-   
+
 </head>
+
 <body ng-controller="b">
-  
+
     <nav class="navbar navbar-expand-lg">
-      <div class="container">
-  <a class="navbar-brand border-right pr-3" href="#"><img ng-src={{logo}} class="img-fluid"></a>
-  <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container">
+            <a class="navbar-brand border-right pr-3" href="#"><img ng-src={{logo}} class="img-fluid"></a>
+            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" ng-click="home()">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#about" ng-click="about()">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#work" ng-click="work()">Work</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#blog" ng-click="blog()">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact" ng-click="contact()">Contact</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-lg mr-2 rounded-0 Sign-in">Sign-in</button>
-      <button class="btn btn-lg my-2 my-sm-0 Sign-Out rounded-0">Sign-Out</button>
-    </form>
-  </div>
-</div>
-</nav>
-
-
-
-<div class="ng-view">
-  
-</div>
-
-
-
-
-
-
-<div class="container-fluid py-5" ng-show="e">
-  <div class="row justify-content-center">
-    <div class="col-lg-6">
-    <h3 class="mb-3 text-center">Job Searching Just Got So Easy</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-
-    <div class="input-group my-5 p-2">
-       <input type="text" class="form-control rounded-0" placeholder="Search job" aria-label="Recipient's username" aria-describedby="basic-addon2" ng-model="l" id="job-search">
-          <div class="input-group-append">
-              <span class="input-group-text rounded-0 ml-3" id="basic-addon2">Search</span>
-          </div>
-    </div>
-  </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h6 class="modal-title text-uppercase">{{title}}</h6>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <div class="modal-body" id="jobs">
-            <div class="row py-3" id="jobs-row" >
-               <div class="col-lg-4">
-                  <i class="fa fa-behance float-left mr-2"></i>
-                  <h6 class="text-capitalize">{{title}}</h6>
-                  <p class="ml-5 text-capitalize">{{type}}</p>
-                </div>
-                <div class="col-lg-2 pt-4">
-                  <p class="text-capitalize">{{community}}</p>
-                </div>
-                <div class="col-lg-3 pt-4">
-                  <p class="text-capitalize">{{location}}</p>
-                </div>
-                <div class="col-lg-3 pt-4">
-                   <button class="btn btn-lg mr-2 rounded-0 Apply float-right">Apply</button>
-                   <p>{{salary | currency}}</p>
-                </div>
-
-                <div class="col-md-9 m-auto">
-                <h6 class="mt-5 mb-3">Description:</h6>
-                <p class="text-capitalize">{{description}}</p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" ng-click="home()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" ng-click="about()">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work" ng-click="work()">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog" ng-click="blog()">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" ng-click="contact()">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-lg mr-2 rounded-0 Sign-in">Sign-in</button>
+                    <button class="btn btn-lg my-2 my-sm-0 Sign-Out rounded-0">Sign-Out</button>
+                </form>
             </div>
-          
         </div>
-      </div>
-    </div>        
-  </div>
-</div>
-  
+    </nav>
 
 
 
-<div class="container " id="jobs" ng-style="d" ng-show="d">
-  <div class="row py-4 px-2" id="jobs-row" ng-repeat="x in jobs | filter:l">
-    <div class="col-lg-4">
-      <i class="fa fa-behance float-left mr-2"></i>
-      <h6 class="text-capitalize">{{x.Title}}</h6>
-      <p class="ml-5 text-capitalize">{{x.Type}}</p>
+    <div class="ng-view">
+
     </div>
-    <div class="col-lg-2 pt-4">
-      <p class="text-capitalize">{{x.Community}}</p>
+
+
+
+
+
+
+    <div class="container-fluid py-5" ng-show="e">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h3 class="mb-3 text-center">Job Searching Just Got So Easy</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+
+                <div class="input-group my-5 p-2">
+                    <input type="text" class="form-control rounded-0" placeholder="Search job" aria-label="Recipient's username" aria-describedby="basic-addon2" ng-model="l" id="job-search">
+                    <div class="input-group-append">
+                        <span class="input-group-text rounded-0 ml-3" id="basic-addon2">Search</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-3 pt-4">
-      <p class="text-capitalize">{{x.Location}}</p>
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title text-uppercase">{{title}}</h6>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body" id="jobs">
+                    <div class="row py-3" id="jobs-row">
+                        <div class="col-lg-4">
+                            <i class="fa fa-behance float-left mr-2"></i>
+                            <h6 class="text-capitalize">{{title}}</h6>
+                            <p class="ml-5 text-capitalize">{{type}}</p>
+                        </div>
+                        <div class="col-lg-2 pt-4">
+                            <p class="text-capitalize">{{community}}</p>
+                        </div>
+                        <div class="col-lg-3 pt-4">
+                            <p class="text-capitalize">{{location}}</p>
+                        </div>
+                        <div class="col-lg-3 pt-4">
+                            <button class="btn btn-lg mr-2 rounded-0 Apply float-right">Apply</button>
+                            <p>{{salary | currency}}</p>
+                        </div>
+
+                        <div class="col-md-9 m-auto">
+                            <h6 class="mt-5 mb-3">Description:</h6>
+                            <p class="text-capitalize">{{description}}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-lg-3 pt-4">
-      <button class="btn btn-lg mr-2 rounded-0 Apply float-right" data-toggle="modal" data-target="#myModal" ng-click = "detail($index)">Detail</button>
-      <button class="btn btn-lg mr-2 rounded-0 remove float-right" ng-click = "remove($index)">Remove</button>
-      <p>{{x.Salary | currency}}</p>
-      
+
+
+
+
+    <div class="container " id="jobs" ng-style="d" ng-show="d">
+        <div class="row py-4 px-2" id="jobs-row" ng-repeat="x in jobs | filter:l">
+            <div class="col-lg-4">
+                <i class="fa fa-behance float-left mr-2"></i>
+                <h6 class="text-capitalize">{{x.Title}}</h6>
+                <p class="ml-5 text-capitalize">{{x.Type}}</p>
+            </div>
+            <div class="col-lg-2 pt-4">
+                <p class="text-capitalize">{{x.Community}}</p>
+            </div>
+            <div class="col-lg-3 pt-4">
+                <p class="text-capitalize">{{x.Location}}</p>
+            </div>
+            <div class="col-lg-3 pt-4">
+                <button class="btn btn-lg mr-2 rounded-0 Apply float-right" data-toggle="modal" data-target="#myModal" ng-click="detail($index)">Detail</button>
+                <button class="btn btn-lg mr-2 rounded-0 remove float-right" ng-click="remove($index)">Remove</button>
+                <p>{{x.Salary | currency}}</p>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
 
 
 
 
-<div class="container-fluid my-5" ng-style="f" ng-show="f">
-  <div class="row justify-content-center">
-    <div class="col-lg-6">
-   <h3 class="mb-5 text-center">Add Job Just Go to get Easy</h3>
-   <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Title" ng-model="Title">
+    <div class="container-fluid my-5" ng-style="f" ng-show="f">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h3 class="mb-5 text-center">Add Job Just Go to get Easy</h3>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Title" ng-model="Title">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="Type" ng-model="Type">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Address" ng-model="Location">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="Salary" ng-model="Salary">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Company" ng-model="Community">
+                        </div>
+                    </div>
+
+                    <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Description" ng-model="Description"></textarea>
+
+                    <button type="submit" class="btn btn-outline-primary rounded-0 mt-2 btn-block" ng-click="add()">Add</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="Type" ng-model="Type">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Address" ng-model="Location">
-    </div>
-    <div class="form-group col-md-6">
-      <input type="text" class="form-control rounded-0" id="inputPassword4" placeholder="Salary" ng-model="Salary">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-12">
-      <input type="text" class="form-control rounded-0" id="inputEmail4" placeholder="Company" ng-model="Community">
-    </div>
-  </div>
-
-  <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Description"
-   ng-model="Description"></textarea>
-
-  <button type="submit" class="btn btn-outline-primary rounded-0 mt-2 btn-block" ng-click="add()">Add</button>
-</form>
-  </div>
-  </div>
-</div>
 
 
 
@@ -205,23 +206,21 @@
 
 
 
-<footer>
-  <div class="container p-5">
-  <ul class="nav" role="tablist">
-    <li class="nav-item">
-      <h6 class="nav-link Seekers" data-toggle="pill">Get Us on :-</h6>
-    </li>
-  </ul>
+    <footer>
+        <div class="container p-5">
+            <ul class="nav" role="tablist">
+                <li class="nav-item">
+                    <h6 class="nav-link Seekers" data-toggle="pill">Get Us on :-</h6>
+                </li>
+            </ul>
 
-  <div class="tab-content">
-    <div id="fist-tab" class="container tab-pane active"><br>
-      <p><i class="fa fa-twitter"></i><i class="fa fa-behance"></i><i class="fa fa-linkedin"></i><i class="fa fa-instagram"></i><i class="fa fa-pinterest"></i><i class="fa fa-phone"></i></p>
-    </div>
-  </div>
-</div>
-</footer>
-
-
+            <div class="tab-content">
+                <div id="fist-tab" class="container tab-pane active"><br>
+                    <p><i class="fa fa-twitter"></i><i class="fa fa-behance"></i><i class="fa fa-linkedin"></i><i class="fa fa-instagram"></i><i class="fa fa-pinterest"></i><i class="fa fa-phone"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -229,6 +228,9 @@
 
 
 
- <script type="text/javascript" src="bootstrap js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript" src="bootstrap js/bootstrap.min.js"></script>
 </body>
+
 </html>
